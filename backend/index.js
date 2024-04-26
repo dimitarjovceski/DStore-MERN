@@ -26,6 +26,7 @@ app.use(
 );
 app.use(cookieParser());
 
+
 app.use("/api/users", userRoutes);
 app.use("/api/categories", categoryRoutes);
 app.use("/api/products", productRoutes);
@@ -33,7 +34,11 @@ app.use("/api/uploads", uploadRoutes);
 app.use("/api/orders", orderRoutes);
 
 const __dirname = path.resolve();
+app.use(express.static(path.join(__dirname, "../../frontend/dist")));
+
 app.use("/uploads", express.static(path.join(__dirname + "/uploads")));
 
-
+app.get("*", (req, res ) => {
+  res.sendFile(path.join(__dirname, "../../frontend/dist/index.html"));
+});
 app.listen(port, () => console.log(`Server is running on PORT: ${port}`));
