@@ -7,7 +7,8 @@
   "scripts": {
     "backend": "nodemon backend/index.js",
     "frontend": "npm run dev --prefix frontend",
-    "start": "node ./dist/index.js",
+    "build": "npm build",
+    "start": "node backend/index.js",
     "dev": "concurrently \"npm run frontend\" \"npm run backend\""
   },
   "keywords": [],
@@ -26,6 +27,8 @@
     "mongodb": "^6.5.0",
     "mongoose": "^8.3.0",
     "multer": "^1.4.5-lts.1",
-    "nodemon": "^3.1.0"
+    "nodemon": "^3.1.0",
+    "webpack": "^5.91.0",
+    "webpack-cli": "^5.1.4"
   }
 }
