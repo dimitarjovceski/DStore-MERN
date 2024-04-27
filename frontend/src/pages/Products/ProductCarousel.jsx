@@ -32,7 +32,7 @@ const ProductCarousel = () => {
       ) : (
         <Slider
           {...settings}
-          className="xl:w-[50rem] lg:w-[50rem] md:w-[56rem] sm:w-[40rem] sm:block"
+          className="xl:w-[50rem] lg:w-[45rem] md:w-[45rem] sm:w-[40rem] sm:block"
         >
           {products.map(
             ({
@@ -87,7 +87,7 @@ const ProductCarousel = () => {
                       </h1>
                       <h1 className="flex items-center mb-6 w-[8rem]">
                         <FaShoppingCart className="text-white mr-2" />
-                        Quantity: {quantity} 
+                        Quantity: {quantity}
                       </h1>
                       <h1 className="flex items-center mb-6 w-[8rem]">
                         <FaBox className="text-white mr-2" />

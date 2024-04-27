@@ -6,7 +6,15 @@ import {
 } from "../../redux/api/orderApiSlice";
 
 const UserOrders = () => {
-  const { data: order, isLoading, error } = useGetMyOrdersQuery();
+  const { data: order, isLoading } = useGetMyOrdersQuery();
+
+  if (order?.length === 0) {
+    return (
+      <div className="text-white text-2xl ml-[40rem] mt-[10rem]">
+        You do not have an orders. <Link to="/shop">Go to shop</Link>
+      </div>
+    );
+  }
   return (
     <div className="container mx-auto ml-[10rem]">
       <h2 className="text-2xl text-white font-semibold">My Orders</h2>

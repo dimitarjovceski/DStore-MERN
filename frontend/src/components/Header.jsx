@@ -1,6 +1,6 @@
 import ProductCarousel from "../pages/Products/ProductCarousel";
 import SmallProduct from "../pages/Products/SmallProduct";
-import { useGetNewProductsQuery, useGetTopProductsQuery } from "../redux/api/productApiSlice";
+import { useGetNewProductsQuery } from "../redux/api/productApiSlice";
 import Loader from "./Loader";
 
 const Header = () => {

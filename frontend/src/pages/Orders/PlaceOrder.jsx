@@ -34,7 +34,7 @@ const PlaceOrder = () => {
       }).unwrap();
       toast.success("Order successfully completed");
       dispatch(clearCartItems());
-      // navigate("/order-result");
+       navigate("/order-result");
     } catch (error) {
       toast.error(error);
     }

@@ -16,7 +16,7 @@ const Register = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  const [register, { isLoading }] = useRegisterMutation();
+  const [register, { isLoading, error }] = useRegisterMutation();
   const { userInfo } = useSelector((state) => state.auth);
 
   const search = useLocation();
@@ -36,13 +36,12 @@ const Register = () => {
       toast.error("Password not match!");
     } else {
       try {
-        const res = await register({ username, email, password });
+        const res = await register({ username, email, password }).unwrap();
         dispatch(setCredentials({ ...res }));
         navigate(redirect);
         toast.success("User successfully registered!");
       } catch (error) {
-        console.log(error);
-        toast.error(error.message);
+        toast.error(error?.data?.message || error.message);
       }
     }
   };
@@ -146,7 +145,11 @@ const Register = () => {
         </div>
       </section>
       <section className="sm:hidden md:block lg:block xl:block mr-[8rem] mt-[5rem]">
-        <img src={logo} alt="name" className="w-full h-[600px] object-cover border" />
+        <img
+          src={logo}
+          alt="name"
+          className="w-full h-[600px] object-cover border"
+        />
       </section>
     </div>
   );

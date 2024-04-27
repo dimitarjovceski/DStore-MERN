@@ -5,9 +5,7 @@ const FavoritesCount = () => {
     const favoritesLength = favorites.length;
   return (
     <div>
-        {favoritesLength > 0 && (
-            <span>{favoritesLength}</span>
-        )}
+        {favoritesLength > 0 ? favoritesLength : 0}
     </div>
   )
 }

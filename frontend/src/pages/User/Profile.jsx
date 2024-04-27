@@ -50,13 +50,18 @@ const Profile = () => {
     <div className="container mx-auto p-4 mt-[10rem]">
       <div className="flex justify-center align-center md:flex md:space-x-4">
         <div className="md:w-1/3">
-          <h2 className="text-2xl text-white font-semibold mb-4 text-center uppercase">
-            Profile
+          <h2 className="text-2xl text-gray-300 font-semibold mb-4 text-center uppercase">
+             Your Profile
           </h2>
 
-          <form onSubmit={handleUpdateProfile} className="bg-black bg-opacity-50 p-5 rounded-md">
+          <form
+            onSubmit={handleUpdateProfile}
+            className="bg-black bg-opacity-50 p-5 rounded-md"
+          >
             <div className="mb-4 ">
-              <label className="text-sm font-bold">Username</label>
+              <label className="text-sm text-gray-300 font-bold">
+                Username
+              </label>
               <input
                 type="text"
                 className="form-input p-2 rounded-md w-full"
@@ -65,7 +70,7 @@ const Profile = () => {
               />
             </div>
             <div className="mb-4">
-              <label className="text-sm font-bold">Email</label>
+              <label className="text-sm text-gray-300 font-bold">Email</label>
               <input
                 type="email"
                 className="form-input p-2 rounded-md w-full"
@@ -74,7 +79,9 @@ const Profile = () => {
               />
             </div>
             <div className="mb-4">
-              <label className="text-sm font-bold">Password</label>
+              <label className="text-sm  text-gray-300 font-bold">
+                Password
+              </label>
               <input
                 type="password"
                 className="form-input p-2 rounded-md w-full"
@@ -83,7 +90,9 @@ const Profile = () => {
               />
             </div>
             <div className="mb-4">
-              <label className="text-sm font-bold">Confirm Password</label>
+              <label className="text-sm text-gray-300 font-bold">
+                Confirm Password
+              </label>
               <input
                 type="password"
                 className="form-input p-2 rounded-md w-full"
@@ -95,14 +104,14 @@ const Profile = () => {
               <button
                 disabled={isLoading}
                 type="submit"
-                className="p-2 rounded-md bg-black text-white uppercase opacity-70 hover:opacity-100"
+                className="p-2 rounded-md bg-green-500 text-white  uppercase  "
               >
                 {isLoading ? "Updating..." : "Update"}
               </button>
               <Link to="/user-orders">
                 <button
                   type="button"
-                  className="p-2 rounded-md bg-black text-white uppercase opacity-70 hover:opacity-100"
+                  className="p-2 rounded-md bg-gray-300 text-black  uppercase opacity-70 hover:opacity-100"
                 >
                   My Orders
                 </button>

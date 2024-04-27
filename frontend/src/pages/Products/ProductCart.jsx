@@ -15,7 +15,7 @@ const ProductCart = ({ product }) => {
     })
   };
   return (
-    <div className="max-w-sm relative bg-[#1A1A1A] rounded-lg shadow">
+    <div className="max-w-xs relative  bg-[#1A1A1A] rounded-lg shadow">
       <section className="relative">
         <Link to={`/product/${product._id}`}>
           <span className="absolute bottom-3  right-3 bg-gray-800 text-white text-sm font-medium mr-1 px-2 py-1 rounded-full">

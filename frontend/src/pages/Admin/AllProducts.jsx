@@ -6,12 +6,12 @@ import AdminMenu from "./AdminMenu";
 const AllProducts = () => {
   const { data: products } = useGetAllProductsQuery();
   return (
-    <div className="mx-[10rem]">
+    <div className="mx-[10rem] ">
       <h1 className="text-white md:text-2xl">
         All Products ({products?.length})
       </h1>
 
-      <div className="flex flex-wrap justify-around items-center">
+      <div className="flex flex-wrap items-center">
         {products?.map((product) => (
           <Link
             key={product._id}

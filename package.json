@@ -5,9 +5,9 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "backend": "nodemon backend/index.js",
+    "backend": "nodemon backend/dist/index.js",
     "frontend": "npm run dev --prefix frontend",
-    "build": "npm install",
+    "build": "babel backend --out-dir backend/dist && cp -R backend",
     "start": "node backend/index.js",
     "dev": "concurrently \"npm run frontend\" \"npm run backend\""
   },
@@ -30,5 +30,10 @@
     "nodemon": "^3.1.0",
     "webpack": "^5.91.0",
     "webpack-cli": "^5.1.4"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.24.1",
+    "@babel/core": "^7.24.4",
+    "@babel/preset-env": "^7.24.4"
   }
 }

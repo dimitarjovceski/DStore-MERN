@@ -26,7 +26,7 @@ const Home = () => {
               Shop
             </Link>
           </div>
-          <div className="flex justify-center flex-wrap mt-[3rem]">
+          <div className="flex justify-center flex-wrap mt-[3rem] w-full">
             {data?.map((product) => (
               <div key={product._id}>
                 <Product product={product} />

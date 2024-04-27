@@ -61,7 +61,6 @@ const Shop = () => {
     dispatch(setChecked(updatedCheck));
   };
 
-  //Add ALL BRANDS option to unique brands
   const uniqueBrands = [
     ...Array.from(
       new Set(
