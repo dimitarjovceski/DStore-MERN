@@ -32,7 +32,7 @@ const ProductCarousel = () => {
       ) : (
         <Slider
           {...settings}
-          className="xl:w-[48rem] lg:w-[48rem] md:w-[35rem] sm:w-[35rem] sm:block"
+          className="xl:w-[50rem] lg:w-[50rem] md:w-[35rem] sm:w-[35rem] sm:block"
         >
           {products.map(
             ({
